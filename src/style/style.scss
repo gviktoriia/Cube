@@ -2,3 +2,56 @@ body {
     background-color: $back;
     color: $text;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-block {
+    background-image: url("./img/Image.png");
+    backdrop-filter: brightness(0.6);
+    background-size: cover;
+    width: 70%;
+    height: 64vh;
+    margin: auto;
+    margin-top: 12vh;
+    background-repeat: no-repeat;
+}
+
+.main-text {
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 60px;
+    max-width: 470px;
+    text-align: left;
+    padding-left: 15%;
+}
+
+.small-tip {
+    font-family: 'Quicksand';
+    font-size: '25px';
+    font-style: regular;
+    padding-left: 15%;
+    padding-top: 12vh;
+    color: $tip;
+}
+
+.line {
+    width: 50px;
+    rotate: 90deg;
+    height: 5px;
+    border-width: 0;
+    background-color: $line;
+    margin-top: 44vh;
+    margin-left: 4%;
+}
+
+.page {
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 60px;
+    color: $page-number;
+    margin-top: 40vh;
+    margin-right: 5%;
+}
