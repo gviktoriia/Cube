@@ -1,57 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100px;
+}
+
 body {
-    background-color: $back;
-    color: $text;
-}
-
-.row {
+    min-width: 100%;
+    min-height: 100vh;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    perspective: 20em;
+    perspective-origin: 77px 100px;
 }
 
-.main-block {
-    background-image: url("./img/Image.png");
-    backdrop-filter: brightness(0.6);
-    background-size: cover;
-    width: 70%;
-    height: 64vh;
-    margin: auto;
-    margin-top: 12vh;
-    background-repeat: no-repeat;
+.cube {
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animate 15s linear infinite;
 }
 
-.main-text {
-    font-family: 'Quicksand';
-    font-weight: bold;
-    font-size: 60px;
-    max-width: 470px;
-    text-align: left;
-    padding-left: 15%;
+@keyframes animate {
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
-.small-tip {
-    font-family: 'Quicksand';
-    font-size: '25px';
-    font-style: regular;
-    padding-left: 15%;
-    padding-top: 12vh;
-    color: $tip;
+.shadow {
+    position: absolute;
+    background: pink;
+    width: 2em;
+    height: 2em;
+    transform: translateZ(-130px) translateX(40px) rotateX(90deg) rotateZ(3deg);
+    text-align: center;
+    bottom: 0;
+    box-shadow: 0 120px 100px 10px purple, 
+                50px 120px 200px 10px purple;
+    filter: blur(100px);
 }
 
-.line {
-    width: 50px;
-    rotate: 90deg;
-    height: 5px;
-    border-width: 0;
-    background-color: $line;
-    margin-top: 44vh;
-    margin-left: 4%;
+.top, .bottom, .left, .right, .front, .back {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background: pink;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 50px 10px purple inset,
+                0 0 2em pink inset;
 }
 
-.page {
-    font-family: 'Quicksand';
-    font-weight: bold;
-    font-size: 60px;
-    color: $page-number;
-    margin-top: 40vh;
-    margin-right: 5%;
+.front {
+    transform: translateZ(1em);
+}
+
+.back {
+    transform: translateZ(-1em);
+}
+
+.top {
+    transform: translateY(-1em) rotateX(90deg);
+}
+
+.bottom {
+    transform: translateY(1em) rotateX(90deg);
+}
+
+.right {
+    transform: translateX(1em) rotateY(90deg);
+}
+
+.left {
+    transform: translateX(-1em) rotateY(90deg);
 }

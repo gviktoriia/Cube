@@ -1,0 +1,1 @@
+!function(){"use strict";console.log(8),console.log((async(o,c)=>6)())}();
