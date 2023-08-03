@@ -11,5 +11,4 @@ Project - visual effects with SASS.
 </div>
 
 ## Project  
-
-![Neon cube](ezgif.com-video-to-gif.gif)
+![Neon cube](ezgif.com-video-to-gif.gif)  
